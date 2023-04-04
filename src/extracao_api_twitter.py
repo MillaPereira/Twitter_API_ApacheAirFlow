@@ -18,6 +18,9 @@ start_time = (datetime.now() + timedelta(-1)).date() # Tirando um dia -> Vai peg
                                                      # O .date é porque após a operação, o formato não 
                                                      # é mantido, então serve para falar que queremos só a data 
 
+# end_time = (datetime.now() + timedelta(seconds=-30)).strftime(TIMESTAMP_FORMAT)
+# start_time = (datetime.now() + timedelta(days=-7)).strftime(TIMESTAMP_FORMAT) # Pegando os dados de uma semana                                                   
+
 query = "data science" # Palavra de interesse -> pegaremos todos os tweets que tenham essa palavra
 
 tweet_fields = "tweet.fields=author_id,conversation_id,created_at,id,in_reply_to_user_id,public_metrics,lang,text" # Campos que vamos utlizar do arquivo json
